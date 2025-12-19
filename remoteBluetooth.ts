@@ -10,13 +10,12 @@ namespace remote {
         constructor() {
             remote.addConnection(this);
             bluetooth.onUartDataReceived(serial.delimiters(Delimiters.NewLine), function () {
-                remote.onDataReceived(bluetooth.uartReadUntil(serial.delimiters(Delimiters.NewLine)))
+                remote.onReceivedLine(bluetooth.uartReadUntil(serial.delimiters(Delimiters.NewLine)))
             })
             bluetooth.startUartService()
         }
     }
     let _connectBluetooth: ConnectBluetooth = undefined
-
     /**
      * TODO: describe your function here
      */

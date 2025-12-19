@@ -4,10 +4,10 @@
     "dependencies": {
         "core": "*",
         "microphone": "*",
-        "bluetooth": "*"
+        "bluetooth": "*",
+        "remote": "github:martinwork/remote#a9d4cdc1b87304719ecfa4faad6183c7e55fbaa4"
     },
     "files": [
-        "main.ts",
         "README.md",
         "remoteBluetooth.ts",
         "test.ts"
